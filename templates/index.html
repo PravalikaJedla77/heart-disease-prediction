@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Disease Prediction Form</title>
+</head>
+<body>
+    <h1>Heart Disease Prediction Form</h1>
+    <form action="/predict" method="post">
+        Age: <input type="text" name="age"><br>
+        Sex: <input type="text" name="sex"><br>
+        CP: <input type="text" name="cp"><br>
+        Trestbps: <input type="text" name="trestbps"><br>
+        Chol: <input type="text" name="chol"><br>
+        Fbs: <input type="text" name="fbs"><br>
+        Restecg: <input type="text" name="restecg"><br>
+        Thalach: <input type="text" name="thalach"><br>
+        Exang: <input type="text" name="exang"><br>
+        Oldpeak: <input type="text" name="oldpeak"><br>
+        Slope: <input type="text" name="slope"><br>
+        CA: <input type="text" name="ca"><br>
+        Thal: <input type="text" name="thal"><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
